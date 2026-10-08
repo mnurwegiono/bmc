@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BMC Builder — Business Model Canvas 1 Halaman</title>
+<style>
+  :root{
+    --navy:#0b1f4a;--blue:#1769ff;--cyan:#00b8d9;--green:#12a86b;--orange:#ff9f1a;
+    --purple:#7c3aed;--red:#ef4444;--yellow:#f7c948;--bg:#f5f8ff;--card:#fff;--text:#14213d;--muted:#64748b;
+    --line:#dbe5f3;
+  }
+  *{box-sizing:border-box} body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#eef6ff 0,#f8fbff 100%);color:var(--text)}
+  .wrap{max-width:1600px;margin:auto;padding:22px}.top{display:flex;gap:18px;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .brand h1{margin:0;font-size:clamp(26px,4vw,52px);line-height:.95;color:var(--navy)}.brand h1 span{color:var(--blue)}
+  .brand p{margin:8px 0 0;color:var(--muted);font-size:14px}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 14px;font-weight:800;cursor:pointer;background:#eaf1ff;color:#1643a3}.btn.primary{background:var(--blue);color:#fff}.btn.green{background:var(--green);color:#fff}.btn.danger{background:#ffe8e8;color:#b91c1c}
+  .grid{display:grid;grid-template-columns:420px 1fr;gap:18px;align-items:start}.panel{background:rgba(255,255,255,.95);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 36px rgba(22,41,85,.08)}
+  .form-panel{padding:18px;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}.form-panel h2{margin:0 0 8px}.hint{font-size:12px;color:var(--muted);margin-bottom:14px}
+  .field{margin-bottom:14px}.field label{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:800;margin-bottom:6px}.field small{font-weight:500;color:var(--muted)}
+  .field input,.field textarea,.field select{width:100%;border:1px solid #cbd8ea;border-radius:10px;padding:10px 11px;font:inherit;background:#fff}.field textarea{min-height:72px;resize:vertical}.field input:focus,.field textarea:focus{outline:2px solid #b9d1ff;border-color:#6b9bff}
+  .micro{background:#f7fbff;border:1px dashed #b7c7dd;border-radius:12px;padding:10px;margin:8px 0 14px;color:#475569;font-size:12px}.micro b{color:var(--navy)}
+  .canvas{padding:16px}.canvas-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:10px}.canvas-head h2{margin:0;color:var(--navy)}.canvas-head .tag{font-size:12px;font-weight:800;color:#fff;background:var(--navy);padding:7px 10px;border-radius:999px}
+  .bmc{display:grid;grid-template-columns:1.05fr 1.05fr 1.35fr 1.05fr 1.05fr;grid-template-rows:240px 155px 180px;gap:10px;min-width:980px}
+  .block{border-radius:15px;padding:14px;border:1px solid rgba(0,0,0,.08);overflow:auto;background:#fff;position:relative}.block h3{margin:0 0 8px;font-size:16px}.block .q{font-size:11px;color:#475569;margin-bottom:8px}.block .content{white-space:pre-wrap;font-size:13px;line-height:1.45}.block.empty .content{color:#94a3b8;font-style:italic}.num{position:absolute;right:10px;top:9px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:900;font-size:12px}
+  #kp{grid-column:1;grid-row:1/3;background:#eef6ff}#ka{grid-column:2;grid-row:1;background:#effcf7}#kr{grid-column:2;grid-row:2;background:#fff9e9}
+  #vp{grid-column:3;grid-row:1/3;background:#fff8e7}#cr{grid-column:4;grid-row:1;background:#fff0f7}#ch{grid-column:4;grid-row:2;background:#effbff}#cs{grid-column:5;grid-row:1/3;background:#f5efff}
+  #cost{grid-column:1/3;grid-row:3;background:#fff0f0}#rev{grid-column:3/6;grid-row:3;background:#f2efff}
+  .n-blue{background:var(--blue)}.n-green{background:var(--green)}.n-orange{background:var(--orange)}.n-purple{background:var(--purple)}.n-red{background:var(--red)}.n-cyan{background:var(--cyan)}
+  .score{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}.score .s{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px;font-size:11px}.score b{display:block;font-size:15px;color:var(--navy)}
+  .warning{margin-top:10px;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:10px;border-radius:12px;font-size:12px}.ok{background:#ecfdf5;border-color:#a7f3d0;color:#065f46}
+  .footer-note{margin-top:10px;font-size:11px;color:#64748b;text-align:center}
+  @media(max-width:1100px){.grid{grid-template-columns:1fr}.form-panel{position:relative;max-height:none}.canvas{overflow:auto}.top{align-items:flex-start;flex-direction:column}}
+  @media print{body{background:#fff}.form-panel,.actions,.hint,.micro,.score,.warning,.footer-note{display:none!important}.grid{display:block}.canvas{border:0;box-shadow:none}.wrap{max-width:none;padding:0}.bmc{min-width:0;grid-template-rows:220px 145px 170px}.top{margin-bottom:8px}.brand p{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <h1>BMC <span>Builder</span></h1>
+      <p>Masukkan ide bisnis → isi terpandu → Business Model Canvas langsung tersusun dalam satu halaman.</p>
+    </div>
+    <div class="actions">
+      <button class="btn" id="sampleBtn">Isi Contoh SmartRoom</button>
+      <button class="btn green" id="printBtn">Cetak / Simpan PDF</button>
+      <button class="btn danger" id="resetBtn">Reset</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <section class="panel form-panel">
+      <h2>Form Ide Bisnis</h2>
+      <div class="hint">Gunakan kalimat singkat, spesifik, dan berbasis bukti. Hindari jawaban seperti “semua orang”, “fitur lengkap”, atau “harga murah” tanpa konteks.</div>
+
+      <div class="field"><label>Nama ide / bisnis <small>wajib</small></label><input id="ideaName" placeholder="Contoh: SmartRoom Campus"></div>
+      <div class="field"><label>Masalah utama <small>problem</small></label><textarea id="problem" placeholder="Siapa mengalami masalah apa, kapan/di mana, dan dampaknya?"></textarea></div>
+      <div class="micro"><b>Urutan yang disarankan:</b> mulai dari Customer Segments → Value Proposition → Channels → Relationships → Revenue → Resources → Activities → Partners → Cost.</div>
+
+      <div class="field"><label>1. Customer Segments <small>siapa yang dilayani?</small></label><textarea id="f_cs" placeholder="Contoh: mahasiswa aktif; universitas; bagian sarana"></textarea></div>
+      <div class="field"><label>2. Value Proposition <small>nilai utama</small></label><textarea id="f_vp" placeholder="Nilai apa yang membuat customer memilih solusi Anda?"></textarea></div>
+      <div class="field"><label>3. Channels <small>bagaimana value sampai?</small></label><textarea id="f_ch" placeholder="Portal, mobile web, QR, media sosial, mitra, dll."></textarea></div>
+      <div class="field"><label>4. Customer Relationships <small>hubungan apa?</small></label><textarea id="f_cr" placeholder="Self-service, onboarding, support, komunitas, notifikasi, dll."></textarea></div>
+      <div class="field"><label>5. Revenue Streams <small>uang dari mana?</small></label><textarea id="f_rev" placeholder="Subscription, fee transaksi, lisensi, usage fee, dll."></textarea></div>
+      <div class="field"><label>6. Key Resources <small>apa yang harus dimiliki?</small></label><textarea id="f_kr" placeholder="Platform, database, tim, brand, data, modal, dll."></textarea></div>
+      <div class="field"><label>7. Key Activities <small>apa yang harus dikerjakan?</small></label><textarea id="f_ka" placeholder="Development, operasi, support, pemasaran, integrasi, dll."></textarea></div>
+      <div class="field"><label>8. Key Partnerships <small>siapa yang membantu?</small></label><textarea id="f_kp" placeholder="Universitas, cloud provider, payment gateway, supplier, dll."></textarea></div>
+      <div class="field"><label>9. Cost Structure <small>biaya utama</small></label><textarea id="f_cost" placeholder="Gaji, cloud/server, akuisisi pelanggan, operasional, integrasi, dll."></textarea></div>
+    </section>
+
+    <section class="panel canvas">
+      <div class="canvas-head">
+        <div><h2 id="canvasTitle">Business Model Canvas</h2><div class="hint" id="problemLine">Masalah: belum diisi.</div></div>
+        <div class="tag">LIVE OUTPUT • 1 HALAMAN</div>
+      </div>
+      <div class="bmc">
+        <div class="block" id="kp"><span class="num n-green">8</span><h3>Key Partnerships</h3><div class="q">Siapa yang membantu model bisnis bekerja?</div><div class="content"></div></div>
+        <div class="block" id="ka"><span class="num n-blue">7</span><h3>Key Activities</h3><div class="q">Aktivitas utama untuk menciptakan dan menyampaikan value.</div><div class="content"></div></div>
+        <div class="block" id="kr"><span class="num n-orange">6</span><h3>Key Resources</h3><div class="q">Aset penting agar value proposition bisa dijalankan.</div><div class="content"></div></div>
+        <div class="block" id="vp"><span class="num n-orange">2</span><h3>Value Propositions</h3><div class="q">Mengapa customer memilih Anda?</div><div class="content"></div></div>
+        <div class="block" id="cr"><span class="num n-purple">4</span><h3>Customer Relationships</h3><div class="q">Bagaimana customer diperoleh, dipertahankan, dan dikembangkan?</div><div class="content"></div></div>
+        <div class="block" id="ch"><span class="num n-cyan">3</span><h3>Channels</h3><div class="q">Melalui jalur apa value sampai ke customer?</div><div class="content"></div></div>
+        <div class="block" id="cs"><span class="num n-purple">1</span><h3>Customer Segments</h3><div class="q">Siapa pengguna, pembayar, dan pengambil keputusan?</div><div class="content"></div></div>
+        <div class="block" id="cost"><span class="num n-red">9</span><h3>Cost Structure</h3><div class="q">Biaya utama untuk menjalankan model bisnis.</div><div class="content"></div></div>
+        <div class="block" id="rev"><span class="num n-purple">5</span><h3>Revenue Streams</h3><div class="q">Value apa yang benar-benar bersedia dibayar customer/buyer?</div><div class="content"></div></div>
+      </div>
+
+      <div class="score">
+        <div class="s"><b id="filledScore">0/9</b>Blok terisi</div>
+        <div class="s"><b id="specificScore">0%</b>Spesifik</div>
+        <div class="s"><b id="evidenceScore">0%</b>Kesiapan diuji</div>
+        <div class="s"><b id="overallScore">0%</b>Kelengkapan</div>
+      </div>
+      <div class="warning" id="coach">Mulai dari Customer Segments dan Value Proposition. Fokus pada siapa customer-nya dan nilai apa yang paling penting bagi mereka.</div>
+      <div class="footer-note">Catatan: BMC adalah hipotesis model bisnis. Validasi tetap diperlukan melalui wawancara, observasi, eksperimen, atau data penggunaan.</div>
+    </section>
+  </div>
+</div>
+<script>
+const map={f_cs:'cs',f_vp:'vp',f_ch:'ch',f_cr:'cr',f_rev:'rev',f_kr:'kr',f_ka:'ka',f_kp:'kp',f_cost:'cost'};
+const fields=[...Object.keys(map)];
+function normalize(v){return v.trim().replace(/\n{3,}/g,'\n\n')}
+function render(){
+  const name=document.getElementById('ideaName').value.trim();
+  const problem=document.getElementById('problem').value.trim();
+  document.getElementById('canvasTitle').textContent=name?`Business Model Canvas — ${name}`:'Business Model Canvas';
+  document.getElementById('problemLine').textContent=problem?`Masalah: ${problem}`:'Masalah: belum diisi.';
+  let filled=0,specific=0;
+  fields.forEach(fid=>{
+    const v=normalize(document.getElementById(fid).value);
+    const block=document.getElementById(map[fid]); const c=block.querySelector('.content');
+    if(v){filled++; c.textContent=v; block.classList.remove('empty'); if(v.length>=28 && !/semua orang|semua kalangan|fitur lengkap|harga murah/i.test(v)) specific++;}
+    else{c.textContent='Belum diisi'; block.classList.add('empty');}
+  });
+  const filledPct=Math.round(filled/9*100); const specPct=filled?Math.round(specific/filled*100):0;
+  const readiness=Math.min(100,Math.round((problem.length>=35?35:problem.length)+(specific*6)+(name?10:0)));
+  const overall=Math.round((filledPct*.55)+(specPct*.25)+(readiness*.20));
+  document.getElementById('filledScore').textContent=`${filled}/9`;
+  document.getElementById('specificScore').textContent=`${specPct}%`;
+  document.getElementById('evidenceScore').textContent=`${readiness}%`;
+  document.getElementById('overallScore').textContent=`${overall}%`;
+  const coach=document.getElementById('coach'); coach.classList.remove('ok');
+  if(filled<2) coach.textContent='Mulai dari Customer Segments dan Value Proposition. Fokus pada siapa customer-nya dan nilai apa yang paling penting bagi mereka.';
+  else if(!document.getElementById('f_rev').value.trim()) coach.textContent='Revenue Streams belum terisi. Bedakan user, buyer/payer, dan decision maker sebelum menentukan siapa yang membayar.';
+  else if(!document.getElementById('f_cost').value.trim()) coach.textContent='Cost Structure belum terisi. Revenue harus selalu dibaca bersama biaya agar model tidak terlihat “untung” secara semu.';
+  else if(specPct<70) coach.textContent='Beberapa jawaban masih terlalu umum. Buat lebih spesifik: siapa, konteksnya apa, nilai yang diterima apa, dan bagaimana mekanismenya.';
+  else {coach.textContent='BMC sudah cukup lengkap untuk dijadikan hipotesis awal. Langkah berikutnya: validasi asumsi paling berisiko dengan evidence.';coach.classList.add('ok');}
+  localStorage.setItem('bmcBuilder',JSON.stringify({name,problem,...Object.fromEntries(fields.map(f=>[f,document.getElementById(f).value]))}));
+}
+['ideaName','problem',...fields].forEach(id=>document.getElementById(id).addEventListener('input',render));
+
+document.getElementById('sampleBtn').onclick=()=>{
+  const s={ideaName:'SmartRoom Campus',problem:'Mahasiswa membuang waktu mencari ruang diskusi yang benar-benar tersedia karena informasi ruang tidak real-time dan tersebar.',
+  f_cs:'Mahasiswa aktif\nUniversitas sebagai buyer/payer\nBagian sarana sebagai operator\nDosen/organisasi sebagai secondary user',
+  f_vp:'Menemukan dan memesan ruang diskusi yang tersedia secara real-time\nMengurangi waktu pencarian ruang\nMeningkatkan utilisasi fasilitas kampus\nMemberikan data penggunaan ruang untuk pengambilan keputusan',
+  f_ch:'Portal mahasiswa\nMobile web\nQR poster di ruang\nLMS dan email kampus\nOrientasi mahasiswa',
+  f_cr:'Self-service untuk mahasiswa\nAutomated notification\nOnboarding admin\nHelp desk untuk universitas\nTraining singkat',
+  f_rev:'Annual institutional subscription\nSetup fee untuk integrasi awal\nOpsional paket sensor premium',
+  f_kr:'Platform aplikasi\nDatabase ruang dan jadwal\nTim developer\nCloud infrastructure\nData penggunaan',
+  f_ka:'Development dan maintenance\nUpdate data ruang\nIntegrasi sistem kampus\nCustomer support\nSecurity dan monitoring',
+  f_kp:'Universitas\nCloud provider\nSensor supplier\nSystem integrator\nMitra pembayaran jika diperlukan',
+  f_cost:'Pengembangan aplikasi\nCloud/server\nCustomer support\nIntegrasi sistem\nSensor dan instalasi\nPromosi dan onboarding'};
+  Object.entries(s).forEach(([k,v])=>document.getElementById(k).value=v);render();
+};
+document.getElementById('resetBtn').onclick=()=>{if(confirm('Hapus semua isi BMC?')){['ideaName','problem',...fields].forEach(id=>document.getElementById(id).value='');localStorage.removeItem('bmcBuilder');render();}};
+document.getElementById('printBtn').onclick=()=>window.print();
+const saved=JSON.parse(localStorage.getItem('bmcBuilder')||'null');if(saved){Object.entries(saved).forEach(([k,v])=>{const el=document.getElementById(k);if(el)el.value=v||'';});}render();
+</script>
+</body>
+</html>
